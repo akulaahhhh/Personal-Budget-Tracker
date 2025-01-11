@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const addRecordButton = document.getElementById("add-record");
     const recordTbody = document.getElementById("record-tbody");
+    let current_income = 0;
+    let current_expense = 0;
+    let current_balance = 0;
+
 
     addRecordButton.addEventListener("click", () => {
         const type = document.getElementById("type").value;
@@ -30,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const newRow = document.createElement("tr");
             const newFlag = document.createElement("td");
 
+            // check the record flag and add the appropriate class
             if(type.toLowerCase() === "expense"){
                 newFlag.classList.add("expense-row");
             }else if(type.toLowerCase() === "income"){
@@ -45,9 +50,28 @@ document.addEventListener("DOMContentLoaded", () => {
             newRow.prepend(newFlag);
             recordTbody.appendChild(newRow);
 
+            // Update the Summary
+            if (type.toLowerCase() === 'income') {
+                current_income += +amount;
+                current_balance += +amount;
+              } else if (type.toLowerCase() === 'expense') {
+                current_expense += +amount;
+                current_balance -= +amount;
+              }
+
+              document.getElementById('amount-income').textContent = `RM ${current_income}`;
+              document.getElementById('amount-expense').textContent = `RM ${current_expense}`;
+              document.getElementById('amount-balance').textContent = `RM ${current_balance}`;
+
+
+
+
+
+
+            // Clear the input fields
             document.getElementById("amount").value = "";
             document.getElementById("description").value = "";
-            
+
         } else {
             alert("Please fill in all fields");
         }
