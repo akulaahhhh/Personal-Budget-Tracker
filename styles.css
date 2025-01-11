@@ -1,0 +1,21 @@
+:root {
+  --bg-primary: #f9fafb; /* Light Grayish Background */
+  --bg-secondary: #ffffff; /* Pure White for Contrast */
+  --text-primary: #1f2937; /* Dark Gray for High Contrast Text */
+  --text-secondary: #4b5563; /* Medium Gray for Secondary Text */
+  --accent: #2563eb; /* Bright Blue for Buttons and Highlights */
+  --border: #d1d5db; /* Light Gray for Subtle Borders */
+  --card-bg: #f3f4f6; /* Off-White for Cards */
+  --tooltip-bg: #111827; /* Dark Gray for Tooltip Backgrounds */
+}
+
+[data-theme="dark"] {
+  --bg-primary: #18181b; /* Almost Black Background */
+  --bg-secondary: #27272a; /* Dark Gray for Panels */
+  --text-primary: #e5e7eb; /* Light Gray for High Contrast Text */
+  --text-secondary: #9ca3af; /* Muted Gray for Secondary Text */
+  --accent: #3b82f6; /* Bright Blue Accent for Consistency */
+  --border: #374151; /* Medium Gray for Borders */
+  --card-bg: #1f2937; /* Deep Gray for Cards */
+  --tooltip-bg: #f9fafb; /* Light Gray for Tooltip Text */
+}
