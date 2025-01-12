@@ -103,7 +103,7 @@ body {
 }
 
 .theme-toggle:hover {
-  background-color: darken(var(--accent), 10%);
+  /* background-color: darken(var(--accent), 10%); */
   color: var(--text-primary);
 }
 
@@ -134,6 +134,7 @@ body {
   flex: 1;
   flex-direction: column;
   text-align: center;
+  align-items: center;
 }
 
 .card .amount{
@@ -204,8 +205,8 @@ body {
   transition: background-color 0.3s;
 }
 
-.submit-button:hover {
-  background-color: #143b8f;
+button:hover {  
+  background-color: #c73a4a;
 }
 
 
@@ -302,7 +303,27 @@ body {
   width: 5%;
 }
 
+.arrow-income,.arrow-expense,.arrow-balance{ 
+  width: 20%;
+  height: auto;
+  padding-bottom: 0.6rem;
+  animation: arrowAnimation 2s infinite;
+}
 
+@keyframes arrowAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @media (max-width: 847px) {
   .input-section {
     flex-direction: column;
