@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
               updateArrow('arrow-expense', previous_expense, current_expense);
               updateArrow('arrow-balance', previous_balance, current_balance);
 
-
+              showToast("Record added successfully");
 
 
             // Clear the input fields
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("description").value = "";
 
         } else {
-            alert("Please fill in all fields");
+            showToast("Please fill in all fields");
         }
 
 
@@ -97,6 +97,16 @@ document.addEventListener("DOMContentLoaded", () => {
               arrow.src = 'img/equal.png';
             }
         }
+
+        //add alert toast function
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = 'toast show';
+            setTimeout(() => {
+              toast.className = toast.className.replace('show', '');
+            }, 4000);
+          }
     });
 });
 
