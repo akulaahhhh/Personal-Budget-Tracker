@@ -261,6 +261,10 @@ body {
   display: flex;
   flex-direction: column;
   display: none;
+  position: fixed;
+  top: 65px;
+  width: 100%;
+  background-color: var(--bg-secondary);
   
 }
 
