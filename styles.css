@@ -351,6 +351,11 @@ button:hover {
   .mobile-items{
     display: flex;
   }
+
+  .record-section{
+    padding: 0;
+    padding-bottom: 2rem;
+  }
 }
 /* Footer */
 .footer {
