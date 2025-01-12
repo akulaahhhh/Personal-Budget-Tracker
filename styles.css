@@ -55,6 +55,7 @@ body {
   padding: 1rem 0;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .nav-links {
@@ -263,9 +264,10 @@ button:hover {
   flex-direction: column;
   display: none;
   position: fixed;
-  top: 65px;
+  top: 60px;
   width: 100%;
   background-color: var(--bg-secondary);
+  z-index: 999;
   
 }
 
