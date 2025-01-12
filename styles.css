@@ -1,25 +1,29 @@
 /* Variables */
 :root {
-  --bg-primary: #f9fafb; /* Light Grayish Background */
-  --bg-secondary: #ffffff; /* Pure White for Contrast */
-  --text-primary: #1f2937; /* Dark Gray for High Contrast Text */
-  --text-secondary: #4b5563; /* Medium Gray for Secondary Text */
-  --accent: #2563eb; /* Bright Blue for Buttons and Highlights */
-  --border: #d1d5db; /* Light Gray for Subtle Borders */
-  --card-bg: #f3f4f6; /* Off-White for Cards */
-  --tooltip-bg: #111827; /* Dark Gray for Tooltip Backgrounds */
+  --bg-primary: #ffffff; /* Pure White for Crisp Modern Look */
+  --bg-secondary: #f5f5f5; /* Light Gray for Subtle Panels */
+  --text-primary: #111111; /* Jet Black for High Contrast Text */
+  --text-secondary: #555555; /* Medium Gray for Secondary Text */
+  --accent: #ff4c60; /* Bright Coral Red for Highlights */
+  --border: #dddddd; /* Soft Gray for Clean Borders */
+  --card-bg: #fafafa; /* Near White for Cards */
+  --tooltip-bg: #000000; /* Jet Black for Tooltip Backgrounds */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle Shadow for Depth */
 }
 
 [data-theme="dark"] {
-  --bg-primary: #18181b; /* Almost Black Background */
-  --bg-secondary: #27272a; /* Dark Gray for Panels */
-  --text-primary: #e5e7eb; /* Light Gray for High Contrast Text */
-  --text-secondary: #9ca3af; /* Muted Gray for Secondary Text */
-  --accent: #3b82f6; /* Bright Blue Accent for Consistency */
-  --border: #374151; /* Medium Gray for Borders */
-  --card-bg: #1f2937; /* Deep Gray for Cards */
-  --tooltip-bg: #f9fafb; /* Light Gray for Tooltip Text */
+  --bg-primary: #121212; /* Almost Black for Modern Dark Mode */
+  --bg-secondary: #1e1e1e; /* Dark Gray for Panels */
+  --text-primary: #e4e4e4; /* Bright White for High Contrast Text */
+  --text-secondary: #aaaaaa; /* Soft Gray for Secondary Text */
+  --accent: #ff6b81; /* Bright Coral Pink for Highlights */
+  --border: #333333; /* Dark Gray for Borders */
+  --card-bg: #1a1a1a; /* Deep Gray for Cards */
+  --tooltip-bg: #f5f5f5; /* Light Gray for Tooltip Text */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Subtle Shadow for Depth */
 }
+
+
 
 /* Reset */
 * {
