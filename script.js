@@ -19,9 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const addRecordButton = document.getElementById("add-record");
     const recordTbody = document.getElementById("record-tbody");
-    let current_income = 0;
-    let current_expense = 0;
-    let current_balance = 0;
+
+    let current_income = parseFloat(document.getElementById('amount-income').textContent.replace("RM", "").trim()) || 0;
+    let current_expense = parseFloat(document.getElementById('amount-expense').textContent.replace("RM", "").trim()) || 0;
+    let current_balance = parseFloat(document.getElementById('amount-balance').textContent.replace("RM", "").trim()) || 0;
+
 
 
     addRecordButton.addEventListener("click", () => {
@@ -50,6 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
             newRow.prepend(newFlag);
             recordTbody.appendChild(newRow);
 
+            let previous_income = current_income;
+            let previous_expense = current_expense;
+            let previous_balance = current_balance;
+
+
             // Update the Summary
             if (type.toLowerCase() === 'income') {
                 current_income += +amount;
@@ -63,7 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
               document.getElementById('amount-expense').textContent = `RM ${current_expense}`;
               document.getElementById('amount-balance').textContent = `RM ${current_balance}`;
 
-
+              updateArrow('arrow-income', previous_income, current_income);
+              updateArrow('arrow-expense', previous_expense, current_expense);
+              updateArrow('arrow-balance', previous_balance, current_balance);
 
 
 
@@ -74,6 +83,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } else {
             alert("Please fill in all fields");
+        }
+
+
+
+        function updateArrow(arrowId, previousAmount, currentAmount) {
+            const arrow = document.getElementById(arrowId);
+            if (currentAmount > previousAmount) {
+              arrow.src = 'img/arrow_increase.png';
+            } else if (currentAmount < previousAmount) {
+              arrow.src = 'img/arrow_decrease.png';
+            } else {
+              arrow.src = 'img/equal.png';
+            }
         }
     });
 });
